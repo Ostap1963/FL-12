@@ -43,8 +43,8 @@
 }
 .padding-medium ol>li:hover::before{
     content:">";
-    color:black;
     font-weight: bold;
+    
 }
 .text::after {
     content: "New";
@@ -123,29 +123,77 @@ section:before {
     border-top: 50px solid lightskyblue;
     border-right: 50px solid transparent;
   }
-/* @media print {
-    body,.container{
-        padding: 0;
-        margin: 0;
-    }
-    .tm-sidebar {
+ 
+ 
+  @media print {
+      
+    .tm-sidebar,section:before, #about, .tm-team-img, .gallery-container, #contact, .img-contact-us, .carousel-indicators, .text::after {
         display: none;
     }
-
-    .tm-team-description-container {
+    .padding-medium > .tm-section-title{
+        text-transform: uppercase;
         text-align: center;
-        margin:0 auto;
-          }
-     .tm-team-img {
-         display: none;
-            }
-     #about {
-         display: none;
-     }  
-     ol {
-         list-style-type: none;
-     }
-     ol>li:nth-child(odd){
-        text-align: right; 
     }
-} */
+    .tm-main-content, .tm-banner {
+		padding-top: 0;
+    }
+    .padding-medium >ol{
+        list-style-type: none;
+        margin-left: 0;
+        margin-right: 0;
+        width: 71%;
+        padding: 0;
+        padding-left: 29%;
+
+    }
+    ol>li:nth-child(odd){
+       text-align: right; 
+   }
+   .padding-medium {
+       padding-top: 0;
+       padding: 0;
+   }
+   .tm-main-content, .tm-content-box {
+    margin-bottom: 0;
+}
+.tm-team-description-container {
+    text-align: center;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    padding-top: 5px;
+}
+
+.blocks > .tm-team-description-container p:last-child {
+    word-spacing: 10px;
+    letter-spacing: 5px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.blocks > .tm-team-description-container p:first-of-type {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 20px;
+}
+.blocks > .tm-team-description-container .tm-section-title{
+    text-align: center;
+    padding-top: 0;
+}
+.tm-section-title{
+    text-transform: uppercase;
+}
+.tm-content-box > .padding-medium h2{
+    font-weight: lighter;
+}
+.carousel-description{
+    width: 105%;
+}
+#tmCarousel {
+    padding-top: 20px;
+    padding-bottom: 0;
+}
+
+} 
